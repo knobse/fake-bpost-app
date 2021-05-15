@@ -1,0 +1,153 @@
+CODE ANALYSIS
+
+Search:
+NO	ISSUE	SEVERITY	STANDARDS	FILES
+
+1	The App uses an insecure Random Number Generator.	warning	CVSS V2: 7.5 (high)
+CWE: CWE-330 Use of Insufficiently Random Values
+OWASP Top 10: M5: Insufficient Cryptography
+OWASP MASVS: MSTG-CRYPTO-6	com/opera/app/push/NotificationsRequestWork.java
+com/appboy/support/IntentUtils.java
+com/whatsapp/QrImageView.java
+com/opera/app/settings/SettingsManager.java
+com/whatsapp/AbstractAppShell.java
+com/whatsapp/AlarmService.java
+com/whatsapp/HomeActivity.java
+
+2	The App logs information. Sensitive information should never be logged.	info	CVSS V2: 7.5 (high)
+CWE: CWE-532 Insertion of Sensitive Information into Log File
+OWASP MASVS: MSTG-STORAGE-3	com/whatsapp/ExternalMediaManager.java
+com/whatsapp/ShareInviteLinkActivity.java
+com/whatsapp/authentication/AppAuthenticationActivity.java
+com/whatsapp/jid/Jid.java
+com/unity3d/services/ar/view/ARView.java
+com/whatsapp/DisplayExceptionDialogFactory$LoginFailedDialogFragment.java
+com/whatsapp/util/Log.java
+com/whatsapp/voipcalling/Voip.java
+com/appboy/support/AppboyLogger.java
+com/amazon/device/iap/internal/a/a.java
+m/m/a/a/n0/a/k.java
+m/m/a/a/n0/a/d.java
+com/whatsapp/DisplayExceptionDialogFactory$ClockWrongDialogFragment.java
+com/whatsapp/backup/encryptedbackup/DisableEncryptionActivity.java
+com/whatsapp/UpdatedOurAppReceiver.java
+com/whatsapp/backup/google/SettingsGoogleDrive.java
+com/whatsapp/biz/catalog/CatalogMediaCard.java
+com/whatsapp/backup/encryptedbackup/RestorePasswordInputActivity.java
+com/whatsapp/VoiceMessagingService.java
+com/amazon/device/iap/PurchasingService.java
+com/amazon/device/iap/internal/a/c.java
+com/davemorrissey/labs/subscaleview/decoder/SkiaPooledImageRegionDecoder.java
+com/whatsapp/backup/google/GoogleBackupService.java
+com/opera/app/settings/SettingsManager.java
+m/m/a/a/p.java
+com/unity3d/services/ar/ARUtils.java
+com/whatsapp/WriteNfcTagActivity.java
+com/onetrust/otpublisherssdk/Logger/OTLogger.java
+com/whatsapp/BootReceiver.java
+com/whatsapp/AbstractAppShell.java
+com/whatsapp/InsufficientStorageSpaceActivity.java
+com/whatsapp/ContactPicker.java
+com/whatsapp/authentication/VerifyTwoFactorAuthCodeDialogFragment.java
+com/whatsapp/AlarmService.java
+com/whatsapp/backup/google/RestoreFromBackupActivity.java
+m/h/b/c/i/v/a.java
+com/whatsapp/TextEmojiLabel.java
+com/whatsapp/util/WhatsAppLibLoader.java
+com/whatsapp/accounttransfer/AccountTransferReceiver.java
+com/whatsapp/account/delete/DeleteAccountFeedback.java
+com/whatsapp/util/crash/SigquitBasedANRDetector.java
+com/whatsapp/ViewSharedContactArrayActivity.java
+com/unity3d/services/ar/view/ShaderLoader.java
+com/whatsapp/Conversation.java
+com/whatsapp/DisplayExceptionDialogFactory$SoftwareExpiredDialogFragment.java
+com/whatsapp/GifVideoPreviewActivity.java
+m/m/a/a/n0/a/h.java
+m/m/a/a/a0.java
+com/davemorrissey/labs/subscaleview/SubsamplingScaleImageView.java
+org/mozilla/rocket/privately/browse/BrowserFragment$onAttach$1.java
+com/whatsapp/NativeMediaHandler.java
+com/whatsapp/TextStatusComposerActivity.java
+com/whatsapp/GifHelper.java
+com/whatsapp/protocol/ProtocolJniHelper.java
+m/m/a/a/s.java
+com/whatsapp/util/FileUtils$OsRename.java
+com/whatsapp/RequestPermissionActivity.java
+com/whatsapp/Mp4Ops.java
+com/whatsapp/AcceptInviteLinkActivity.java
+com/whatsapp/CorruptInstallationActivity.java
+com/whatsapp/wamsys/JniBridge.java
+com/whatsapp/registration/backuptoken/BackupTokenAgentHelper.java
+com/whatsapp/DocumentPickerActivity.java
+com/whatsapp/AlarmBroadcastReceiver.java
+com/whatsapp/account/delete/DeleteAccountActivity.java
+com/whatsapp/perf/ProfiloUploadService.java
+m/m/a/a/n0/a/b.java
+com/innovativegames/knockdown/data/DataSource.java
+com/whatsapp/backup/encryptedbackup/EnableEncryptionActivity.java
+com/whatsapp/authentication/AppAuthSettingsActivity.java
+com/unity3d/services/ar/view/GLSurfaceView.java
+com/whatsapp/accountsync/ProfileActivity.java
+com/whatsapp/biz/product/view/activity/ProductDetailActivity.java
+m/m/a/a/g0.java
+com/whatsapp/account/delete/DeleteAccountConfirmation.java
+m/m/a/a/n0/a/i.java
+com/whatsapp/biometric/BiometricAuthPlugin.java
+com/whatsapp/Main.java
+m/m/a/a/f0.java
+com/amazon/device/iap/internal/e.java
+com/whatsapp/DisplayExceptionDialogFactory$ContactBlockedDialogFragment.java
+com/whatsapp/HomeActivity.java
+com/whatsapp/backup/google/GoogleDriveNewUserSetupActivity.java
+m/m/a/a/x.java
+com/whatsapp/DisplayExceptionDialogFactory$SoftwareAboutToExpireDialogFragment.java
+m/m/a/a/m.java
+m/m/a/a/n0/a/l.java
+com/whatsapp/blocklist/BlockList.java
+org/mozilla/rocket/privately/browse/BrowserFragmentLegacy$onAttach$1.java
+com/whatsapp/backup/encryptedbackup/VerifyPasswordActivity.java
+
+3	App can read/write to External Storage. Any App can read data written to External Storage.	high	CVSS V2: 5.5 (medium)
+CWE: CWE-276 Incorrect Default Permissions
+OWASP Top 10: M2: Insecure Data Storage
+OWASP MASVS: MSTG-STORAGE-2	com/whatsapp/ExternalMediaManager.java
+com/whatsapp/backup/google/GoogleBackupService.java
+com/whatsapp/AlarmService.java
+
+4	App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.	warning	CVSS V2: 5.9 (medium)
+CWE: CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+OWASP Top 10: M7: Client Code Quality	m/h/b/c/i/x/j/b0.java
+m/h/b/c/i/x/j/h0.java
+m/h/b/c/i/x/j/f0.java
+
+5	IP Address disclosure	warning	CVSS V2: 4.3 (medium)
+CWE: CWE-200 Information Exposure
+OWASP MASVS: MSTG-CODE-2	com/amazon/device/iap/PurchasingService.java
+com/whatsapp/AbstractAppShell.java
+com/whatsapp/util/WhatsAppLibLoader.java
+com/viber/voip/pixie/PixieControllerNativeImpl.java
+
+6	Files may contain hardcoded sensitive information like usernames, passwords, keys etc.	warning	CVSS V2: 7.4 (high)
+CWE: CWE-312 Cleartext Storage of Sensitive Information
+OWASP Top 10: M9: Reverse Engineering
+OWASP MASVS: MSTG-STORAGE-14	com/spotify/signup/api/services/model/FacebookSignupStatus.java
+com/viber/voip/pixie/ProxySettings.java
+com/onetrust/otpublisherssdk/OTPublishersSDKActivity.java
+com/spotify/signup/api/services/model/EmailSignupStatus.java
+mozilla/components/concept/engine/prompt/PromptRequest.java
+
+7	This App copies data to clipboard. Sensitive data should not be copied to clipboard as other applications can access it.	info	CVSS V2: 0 (info)
+OWASP MASVS: MSTG-STORAGE-10	com/whatsapp/CopyableTextView.java
+
+8	MD5 is a weak hash known to have hash collisions.	warning	CVSS V2: 7.4 (high)
+CWE: CWE-327 Use of a Broken or Risky Cryptographic Algorithm
+OWASP Top 10: M5: Insufficient Cryptography
+OWASP MASVS: MSTG-CRYPTO-4	com/appboy/support/StringUtils.java
+
+9	SHA-1 is a weak hash known to have hash collisions.	warning	CVSS V2: 5.9 (medium)
+CWE: CWE-327 Use of a Broken or Risky Cryptographic Algorithm
+OWASP Top 10: M5: Insufficient Cryptography
+OWASP MASVS: MSTG-CRYPTO-4	com/whatsapp/wamsys/JniBridge.java
+
+10	This App uses SSL certificate pinning to detect or prevent MITM attacks in secure communication channel.	secure	CVSS V2: 0 (info)
+OWASP MASVS: MSTG-NETWORK-4	com/onetrust/otpublisherssdk/Connection/ConsentUploadWorker.java
