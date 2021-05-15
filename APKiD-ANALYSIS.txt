@@ -1,0 +1,19 @@
+APKiD ANALYSIS
+
+classes.dex
+
+Compiler
+dexlib 2.x
+
+Anti Debug Code	
+Debug.isDebuggerConnected() check
+
+Anti-VM Code
+Build.FINGERPRINT check
+Build.MODEL check
+Build.MANUFACTURER check
+Build.PRODUCT check
+possible Build.SERIAL check
+Build.TAGS check
+network operator name check
+possible VM check
