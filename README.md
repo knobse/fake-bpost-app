@@ -6,7 +6,7 @@ bpost316.apk (3.3MB)
 bpost
 
 
-Package name: com.eg.android.AlipayGphone
+Package name: com.eg.android.AlipayGphone / com.tencent.mm / ...
 
 versionCode: 1
 
